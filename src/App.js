@@ -34,7 +34,7 @@ function App() {
     <p className="capitulo">Comunidade Cristã Rompendo Em Fé.</p>
 
     <nav class="items">
-    <a href="#">Home</a>
+    <a href="/">Culto</a>
     <a href="#">Testemunho</a>
 
     </nav>
