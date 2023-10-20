@@ -11,6 +11,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 .container_header {
@@ -88,6 +89,7 @@ body {
   display: flex;
   justify-content: center;
   padding: 25px;
+  
 }
 
 .dataAtual {

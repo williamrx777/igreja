@@ -6,7 +6,7 @@ function App() {
 
   useEffect(() => {
     // Faça a chamada à API para obter os cultos
-    fetch('http://localhost:8080/igreja')
+    fetch('https://comunidade-rompendo-em-fe.onrender.com/igreja')
       .then((response) => response.json())
       .then((data) => {
         // Assumindo que a API retorna um array de objetos com os atributos id, culto e dataAtual
@@ -29,7 +29,7 @@ function App() {
     <div >
 
     <div className='container_header'>
-    <img className="logo" src="https://scontent.fsdu22-1.fna.fbcdn.net/v/t39.30808-6/348425284_1391076438397536_1286792823399688757_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=a2f6c7&_nc_ohc=-45AY2AVL8sAX9WYvX4&_nc_ht=scontent.fsdu22-1.fna&oh=00_AfDZmRM1-heUXBnmndBdKaEzP5R0lYdffiSE99Bz4kkIsw&oe=65160850" />
+    <img className="logo" src="https://scontent.fsdu22-1.fna.fbcdn.net/v/t39.30808-6/348425284_1391076438397536_1286792823399688757_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGac9vzx6C6kp2dTsmcQhX_ZhHOrzCxYnRmEc6vMLFidGYZ-fNGHXcBYo3aEqINVuHH2XPtfOOA5OiyVoZeYRaa&_nc_ohc=trAlwV36RagAX9cboOD&_nc_ht=scontent.fsdu22-1.fna&oh=00_AfCcPwoxY59kqEEJ3HLmc_COuJDsHmPsPau_JsWjb9Hz1A&oe=6537A690" />
 
     <p className="capitulo">Comunidade Cristã Rompendo Em Fé.</p>
 
@@ -56,17 +56,17 @@ function App() {
         {cultos.map((culto) => (
           <li key={culto.id}>
             <h2>{culto.id}</h2>
-            <p className='dataAtual'>Data: {culto.dataAtual}</p>
             {culto.culto && (
               <iframe
-                title={`Culto ${culto.id}`}
-                src={culto.culto}
-                width="800"
-                height="600"
-                frameBorder="0"
-                allowFullScreen
+              title={`Culto ${culto.id}`}
+              src={culto.culto}
+              width="800"
+              height="600"
+              frameBorder="0"
+              allowFullScreen
               ></iframe>
-            )}
+              )}
+              <p className='dataAtual'>Data: {culto.dataAtual}</p>
           </li>
         ))}
       </ul>
@@ -74,9 +74,10 @@ function App() {
 
      <div className="container_footer">
       <p className="contato">E-mail: ccrfni.rompendoemfe@gmail.com</p>
+      <p className='contato'>Endereço: Travessa Mineira, 21, Nova Iguaçu, RJ, Brazil</p>
       <a href="https://www.facebook.com/ccrfni.rompendoemfe">
         <img className="face" src="https://www.gov.br/mre/pt-br/delbrasupa/facebook-logo-blue-circle-large-transparent-png.png" />
-        
+      
       </a>
     </div>
 
